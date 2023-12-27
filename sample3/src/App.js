@@ -110,15 +110,6 @@ export default class App extends Component {
     this.setState({ items });
   }
 
-  saveItem(seq, value) {
-    const items = [...this.$state.items];
-    const index = items.findIndex((v) => v.seq === seq);
-
-    items[index].contents = value;
-    items[index].updateStatus = false;
-    this.setState({ items });
-  }
-
   filterItem(isFilter) {
     this.setState({ isFilter });
   }
